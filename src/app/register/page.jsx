@@ -2,10 +2,14 @@ import React from 'react'
 import { FaDoorOpen  } from "react-icons/fa6";
 import styles from './register.module.css'
 import Link from 'next/link';
+import Navbar from "@/components/Navbar";
+
 
 
 export default function Register() {
   return (
+    <>
+    <Navbar />
     <div className='bg-slate-900 w-full flex flex-col gap-8 items-center justify-center   text-white'>
     <div className='text-white flex gap-5 items-center'>
     <FaDoorOpen size={60}/>
@@ -21,5 +25,6 @@ export default function Register() {
      <Link href="/login"> Already have an Account?, Login Now</Link>
       </form>
   </div>
+  </>
   )
 }

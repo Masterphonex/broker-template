@@ -3,9 +3,13 @@ import React from 'react'
 import styles from './login.module.css'
 import Link from 'next/link'
 import { FaLock } from "react-icons/fa6";
+import Navbar from "@/components/Navbar";
+
 
 export default function Login() {
   return (
+  <>
+    <Navbar />
     <div className='bg-slate-900 w-full flex flex-col gap-8 items-center justify-center h-[89vh] overflow-y-hidden text-white'>
       <div className='text-white flex gap-5 items-center'>
       <FaLock size={60}/>
@@ -19,5 +23,6 @@ export default function Login() {
        <Link href="/register">Dont have An Account?, Create One</Link>
         </form>
     </div>
+  </>
   )
 }
